@@ -8,15 +8,15 @@ import { Provider } from 'react-redux';
 import saga from 'redux-saga';
 import createLogger from 'redux-logger';
 
-import * as reducers from '../reducers';
-import sagaRoot from '../sagas';
-import CounterApp from './counterApp';
+import * as reducers from './reducers';
+import sagaRoot from './sagas';
+import CounterApp from './containers/counterApp';
 
 // The middlewares which will be used in this App
 const middlewares = [];
-// Initial the reducers
+// Initialize the reducers
 const reducer = combineReducers(reducers);
-// Initial the saga middleware
+// Initialize the saga middleware
 const sagaMiddleware = saga();
 
 middlewares.push(sagaMiddleware);
@@ -24,14 +24,6 @@ if (process.env.NODE_ENV === 'development') {
   const logger = createLogger();
   middlewares.push(logger);
 }
-
-// Apply middlewares to store
-// const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
-//
-// function createDefaultStore(initialState) {
-//   const defaultStore = createStoreWithMiddleware(reducer, initialState);
-//   return defaultStore;
-// }
 
 const store = createStore(
   reducer,
