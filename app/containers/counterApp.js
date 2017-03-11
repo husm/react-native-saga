@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Counter from '../components/counter';
-import * as counterActions from '../actions/counterActions';
+// import * as counterActions from '../actions/counterActions';
+import * as counterActions from '../actions';
 
 class CounterApp extends Component {
   constructor(props) {
@@ -11,11 +12,12 @@ class CounterApp extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { state, actions } = this.props;
+    console.log('render==========>', this.props);
     return (
       <Counter
-        counter={state.count}
+        count={state.counter.count}
+        apiMsg={state.apiTester.apiMsg}
         {...actions}
       />
     );
@@ -23,14 +25,17 @@ class CounterApp extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log('mapStateToProps===========>', state);
   return {
-    state: state.counter
+    state: state
   };
 }
 
 function mapDispatchToProps(dispatch) {
+  console.log('mapDispatchToProps=========>', counterActions.actions);
   return {
-    actions: bindActionCreators(counterActions, dispatch)
+    actions: bindActionCreators(counterActions.actions, dispatch)
+    // actions: bindActionCreators(counterActions, dispatch)
   };
 }
 
