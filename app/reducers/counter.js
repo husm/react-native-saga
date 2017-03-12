@@ -17,16 +17,6 @@ export default function counter(state = initialState, action = {}) {
         ...state,
         count: state.count - 1
       };
-    // case types.API_REQUEST_SUCCEEDED:
-    //   return {
-    //     ...state,
-    //     apiMsg: 'API called succeeded!'
-    //   };
-    // case types.API_REQUEST_FAILED:
-    //   return {
-    //     ...state,
-    //     apiMsg: 'API called failed!'
-    //   };
     default:
       return state;
   }

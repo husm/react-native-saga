@@ -25,10 +25,10 @@ export default class Counter extends Component {
   }
 
   render() {
-    const { count, apiMsg, increment, decrement, incrementAsync, apiRequest } = this.props;
+    const { count, increment, decrement, incrementAsync } = this.props;
 
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <Text>{count}</Text>
         <TouchableOpacity onPress={increment} style={styles.button}>
           <Text>up</Text>
@@ -39,10 +39,6 @@ export default class Counter extends Component {
         <TouchableOpacity onPress={incrementAsync} style={styles.button}>
           <Text>async up</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => apiRequest({section_id: 1})} style={styles.button}>
-          <Text>Api Request</Text>
-        </TouchableOpacity>
-        <Text>{apiMsg}</Text>
       </View>
     );
   }

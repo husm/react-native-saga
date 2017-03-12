@@ -4,7 +4,15 @@ import axios from 'axios';
 
 export function* handleApiRequest(action) {
   try {
-    const response = yield call(axios.post, 'https://jsonplaceholder.typicode.com/posts', {section_id: action.payload.section_id});
+    const apiConfig = {
+      method: 'post',
+      url: 'https://jsonplaceholder.typicode.com/posts',
+      data: {
+        section_id: action.payload.section_id
+      }
+    };
+
+    const response = yield call(axios, apiConfig);
     console.log(response);
     yield put({type: 'API_REQUEST_SUCCEEDED', payload: response.data });
   } catch (e) {

@@ -5,11 +5,15 @@ If you do not know what are redux and redux-saga, please learn the basic concept
 ### v0.1
 Please use `git checkout -b version0_1 v0.1` to get v0.1 release. In this version I accomplished a very simple example which contains an asynchronous increment button
 
+### v0.2
+Please use `git checkout -b version0_2 v0.2` to get v0.2 release. In this version I separate the counter component into two components, one is for counter and one is for api tester. I use [axios](https://github.com/mzabriskie/axios) to post the request to a [public api server](https://jsonplaceholder.typicode.com/) and get the response result.
+
 ## <a name='requirement'>Requirements
 - react-native
 - react-redux
 - redux-saga
 - redux-logger
+- axios
 
 ## Installation
 Use yarn or npm to install the packages listed in [Requirements](#requirement) section.
