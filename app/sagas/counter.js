@@ -1,5 +1,5 @@
 import {delay} from 'redux-saga';
-import {put, takeEvery} from 'redux-saga/effects';
+import {call, put, takeEvery} from 'redux-saga/effects';
 
 export function* handleIncrementAsync() {
   yield delay(1000);

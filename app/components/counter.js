@@ -21,14 +21,15 @@ const styles = StyleSheet.create({
 export default class Counter extends Component {
   constructor(props) {
     super(props);
+    console.log('constructor=========>', props);
   }
 
   render() {
-    const { counter, increment, decrement, incrementAsync } = this.props;
+    const { count, increment, decrement, incrementAsync } = this.props;
 
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>{counter}</Text>
+      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+        <Text>{count}</Text>
         <TouchableOpacity onPress={increment} style={styles.button}>
           <Text>up</Text>
         </TouchableOpacity>

@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * Sample React Native with redux and saga
  * https://github.com/facebook/react-native
  * @flow
  */
@@ -9,7 +9,6 @@
    AppRegistry,
  } from 'react-native';
 
- // import App from './app/containers/app';
  import App from './app';
 
  AppRegistry.registerComponent('react_native_saga', () => App);
