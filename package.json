@@ -12,10 +12,11 @@
 		"react": "~15.4.1",
 		"react-native": "0.42.0",
 		"react-native-vector-icons": "^4.0.0",
-		"react-navigation": "^1.0.0-beta.6",
+		"react-navigation": "^1.0.0-beta.7",
 		"react-redux": "^5.0.3",
 		"redux": "^3.6.0",
 		"redux-logger": "^2.8.2",
+		"redux-persist": "^4.4.2",
 		"redux-saga": "^0.14.3"
 	},
 	"devDependencies": {

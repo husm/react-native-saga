@@ -26,6 +26,7 @@ export default class Counter extends Component {
 
   render() {
     const { count, increment, decrement, incrementAsync } = this.props;
+    console.log('Counter==========>', this.props);
 
     return (
       <View style={{alignItems: 'center', justifyContent: 'center'}}>

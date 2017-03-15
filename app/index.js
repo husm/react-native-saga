@@ -10,7 +10,8 @@ import createLogger from 'redux-logger';
 
 import * as reducers from './reducers';
 import sagaRoot from './sagas';
-import SampleApp from './containers/sampleApp';
+// import SampleApp from './containers/sampleApp';
+import StartUpApp from './containers/startUp';
 
 // The middlewares which will be used in this App
 const middlewares = [];
@@ -35,7 +36,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <SampleApp />
+        <StartUpApp />
       </Provider>
     );
   }
