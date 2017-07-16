@@ -1,5 +1,5 @@
 # React Native / Redux / Saga
-This project is used to help the newbies like me to integrate react-native project with redux and redux-saga.
+This project is used to help the newbies to integrate react-native project with redux and redux-saga.
 If you do not know what are redux and redux-saga, please learn the basic concepts of them first, then back to this example again.
 
 ### v0.1
